@@ -1,0 +1,17 @@
+[
+    {
+        "id_cliente": 1,
+        "nombre": "Carlos Gómez",
+        "ciudad": "Río Grande"
+    },
+    {
+        "id_cliente": 2,
+        "nombre": "Marina Rossi",
+        "ciudad": "Ushuaia"
+    },
+    {
+        "id_cliente": 3,
+        "nombre": "Laura Pérez",
+        "ciudad": "Tolhuin"
+    }
+]
