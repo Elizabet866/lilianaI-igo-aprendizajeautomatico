@@ -1,2 +1,61 @@
-# Actividades Semana 4
-Resolución de Regresión Lineal y Regresión Logística.
+# Actividades - Semana 4: Aprendizaje Automático
+
+Este repositorio contiene el desarrollo y análisis de modelos de aprendizaje supervisado correspondientes a la Semana 4: **Regresión Lineal Simple** y **Regresión Logística Multiclase**.
+
+---
+
+## Actividad 1: Regresión Lineal Simple
+
+### 1. Descripción del Dataset
+- **Fuente:** `student-mat.csv` (*Student Performance Data Set*, Cortez & Silva, 2008).
+- **Contexto:** Registros de rendimiento académico, datos sociodemográficos y hábitos de estudio de estudiantes de secundaria en la asignatura de Matemáticas.
+- **Observaciones:** 395 registros de alumnos.
+
+### 2. Formulación del Problema y Pregunta Analítica
+- **Problema:** Anticipar el rendimiento final de los estudiantes para implementar intervenciones y apoyos pedagógicos oportunos antes del cierre del ciclo lectivo.
+- **Pregunta:** ¿En qué medida la calificación obtenida en el segundo período ($G2$) permite predecir cuantitativamente la calificación final ($G3$)?
+- **Objetivo:** Entrenar un modelo de regresión lineal para estimar la nota final del estudiante a partir de su rendimiento previo.
+
+### 3. Definición de Variables
+- **Variable predictora ($X$):** `G2` — Calificación del segundo período escolar (escala de 0 a 20 puntos).
+- **Variable continua objetivo ($y$):** `G3` — Calificación final cuantitativa a predecir (escala de 0 a 20 puntos).
+
+### 4. Resultados Principales
+- **Partición:** 80% entrenamiento (316 casos) / 20% prueba (79 casos).
+- **Ecuación ajustada:** $\text{Nota Final } (G3) \approx 1.074 \times G2 - 0.964$
+- **Métricas sobre el conjunto de prueba:**
+  - $R^2 = 0.70$ (el modelo explica el 70% de la variabilidad de la nota final).
+  - Error Absoluto Medio ($MAE$): $1.37$ puntos.
+
+---
+
+## Actividad 2: Regresión Logística Multiclase
+
+### 1. Descripción del Dataset
+- **Fuente:** `usuarios_win_mac_lin.csv`.
+- **Contexto:** Métricas de interacción y comportamiento de navegación web de usuarios en una plataforma digital.
+- **Observaciones:** 170 sesiones.
+
+### 2. Formulación del Problema y Objetivo
+- **Problema:** Clasificación del entorno de software del visitante para optimizar la compatibilidad y la experiencia de usuario.
+- **Pregunta:** ¿Es posible predecir el sistema operativo del usuario a partir de sus parámetros cuantitativos de navegación?
+- **Objetivo:** Entrenar un clasificador logístico multiclase (algoritmo multinomial con solver `lbfgs`) para predecir la pertenencia a una de tres categorías de sistemas operativos.
+
+### 3. Definición de Variables
+- **Variables predictoras ($X$):** `duracion` (tiempo de sesión), `paginas` (páginas vistas), `acciones` (interacciones) y `valor` (puntaje de actividad).
+- **Variable objetivo categórica ($y$):** `clase` — Sistema operativo:
+  - `0`: Windows
+  - `1`: Macintosh
+  - `2`: Linux
+
+### 4. Resultados Principales
+- **Partición:** 80% entrenamiento / 20% prueba (con división estratificada por clase).
+- **Exactitud global (*Accuracy*):** 74% en el conjunto de prueba.
+
+---
+
+## Estructura de la Carpeta
+- `Datos/`: Conjuntos de datos utilizados en las prácticas.
+- `Notebooks/`:
+  - `Regresión_lineal.ipynb`: Código comentado, visualizaciones y métricas de regresión simple.
+  - `Regresión_logistica.ipynb`: Preprocesamiento, matriz de confusión y reporte de clasificación multiclase.
