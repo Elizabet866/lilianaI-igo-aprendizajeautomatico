@@ -59,3 +59,8 @@ Este repositorio contiene el desarrollo y análisis de modelos de aprendizaje su
 - `Notebooks/`:
   - `Regresión_lineal.ipynb`: Código comentado, visualizaciones y métricas de regresión simple.
   - `Regresión_logistica.ipynb`: Preprocesamiento, matriz de confusión y reporte de clasificación multiclase.
+---
+
+### 📌 Actualizaciones y Revisiones (Semana 4)
+* **Regresión Lineal (`Regresión_lineal.ipynb`):** Se integró la interpretación conceptual de la ecuación de la recta ($b_1 = 1.074$, $b_0 = -0.964$) y la evaluación de las métricas MAE, MedAE, MSE y $R^2$ en el contexto del rendimiento escolar.
+* **Regresión Logística (`Regresión_logistica.ipynb`):** Se añadió el análisis de la matriz de confusión y el reporte de clasificación, profundizando en el diagnóstico del desbalance y bajo recall de la clase Macintosh (Mac).
