@@ -87,7 +87,7 @@ Semana_8/
 ├── Datos/
 │   └── dataset_segmentacion_clientes.csv
 ├── Notebooks/
-│   └── segmentacion_clientes_kmeans.ipynb
+│   └── Tarea_Semana_8_kmeans.ipynb
 └── README.md
 ```
 
